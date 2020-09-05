@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block tituloPagina %}
+    REMOVER
+{%endblock%}
+
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <h4>Tem certeza que deseja remover o livro {{ livro.titulo }}?</h4>
+    <br>
+    <button class="btn btn-primary" type="submit">Apagar</button>
+</form>
+
+{% endblock %}
