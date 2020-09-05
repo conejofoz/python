@@ -18,6 +18,7 @@ class Contato(models.Model):
     data_criacao = models.DateField(default=timezone.now)
     descricao = models.CharField(max_length=100)
     categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING)
+    mostrar = models.BooleanField(default=True)
 
     def __str__(self):
         return self.nome
