@@ -3,6 +3,7 @@ from .models import Categoria, Contato
 
 
 #Essa classe sobreescreve as opções default do django admin
+#Depois de ser implementada ela tem que ser registrada no django-admin
 class contatoAdmin(admin.ModelAdmin):
     list_display = ('id', 'nome', 'sobrenome', 'telefone', 'email', 'data_criacao', 'categoria')
     list_display_links = ('id', 'nome', 'sobrenome')
