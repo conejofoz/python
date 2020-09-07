@@ -15,6 +15,20 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
+          <br><br>
+          <form action="{% url 'busca' %}" method="get">
+              <div class="form-group row">
+                  <div class="col-12">
+                      <input type="search"
+                             id="search-input"
+                             name="termo"
+                             class="form-control"
+                             placeholder="Digite sua pesquisa"
+                             value="{{ request.GET.termo }}">
+                      {% include 'parciais/_messages.html' %}
+                  </div>
+              </div>
+          </form>
           {% block conteudo %}
           {% endblock %}
       </div>
